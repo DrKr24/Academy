@@ -1,0 +1,102 @@
+.header {
+  padding: 24px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet-small {
+    }
+  }
+  &__logo {
+    width: 180px;
+    @include laptop {
+      width: 150px;
+    }
+    @include tablet-small {
+      width: 120px;
+    }
+    @include phone-large {
+      width: 100px;
+    }
+  }
+  &__interactive {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @include phone-large {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 8px;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      &-text {
+        @include fluid-text(16, 20);
+      }
+      &-arrow {
+        width: 14px;
+        height: 2px;
+        background-color: var(--font-color-first);
+        &::before {
+          content: "";
+          display: block;
+          position: relative;
+          bottom: 3px;
+          left: 6.4px;
+          rotate: 45deg;
+          width: 8px;
+          height: 2px;
+          background-color: var(--font-color-first);
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          top: 1px;
+          left: 6.4px;
+          rotate: -45deg;
+          width: 8px;
+          height: 2px;
+          background-color: var(--font-color-first);
+        }
+        @include phone-large {
+          rotate: 90deg;
+        }
+      }
+      @include phone-large {
+        margin-left: 10px;
+      }
+    }
+    &-field {
+      width: 400px;
+      height: 56px;
+      padding: 16px 20px;
+      @include fluid-text(14, 17);
+      box-shadow: 1px 1px 0 0 var(--font-color-first);
+      @include laptop {
+        width: 300px;
+      }
+      @include tablet-small {
+        width: 170px;
+        height: 45px;
+        padding: 12px 15px;
+      }
+      @include phone-large {
+        width: 200px;
+        height: 45px;
+        padding: 10px 15px;
+      }
+
+      @include phone-small {
+        width: 173px;
+      }
+      &::placeholder {
+        line-height: 153%;
+        text-decoration: underline;
+        color: #a0a0a0;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.container {
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  max-width: var(--container-width);
+}
+
+.input-container {
+  margin-inline: auto;
+  position: relative;
+  width: 640px;
+  @include laptop {
+    width: 540px;
+  }
+  @include tablet-small {
+    width: 400px;
+  }
+  @include phone-alter {
+    width: 320px;
+  }
+  @include phone-large {
+    width: 280px;
+  }
+
+  @include phone-small {
+    width: 240px;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 26px 130px 26px 38px;
+    border: 2px solid var(--font-color-first);
+    border-radius: var(--border-radius);
+    font-size: 17px;
+    &::placeholder {
+      line-height: 1.53;
+      color: #a0a0a0;
+    }
+    @include laptop {
+      padding: 20px 110px 20px 30px;
+    }
+    @include phone-alter {
+      font-size: 14px;
+      padding: 15px 85px 15px 15px;
+    }
+    @include phone-small {
+      font-size: 12px;
+      padding: 10px 85px 10px 15px;
+      border: 1px solid var(--font-color-first);
+    }
+  }
+  button {
+    @include flex-center;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 120px;
+    aspect-ratio: 1.87;
+    background-color: var(--font-color-first);
+    border-radius: 100px;
+    @include laptop {
+      top: 5px;
+      width: 100px;
+    }
+    @include phone-alter {
+      width: 75px;
+    }
+    @include phone-small {
+      width: 57px;
+      top: 3px;
+      right: 3px;
+    }
+    img {
+      @include phone-alter {
+        width: 20px;
+      }
+      @include phone-small {
+        width: 14px;
+      }
+    }
+  }
+}
+
+.title {
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  @include fluid-text(14, 20);
+}
+
+.description {
+  max-width: 633px;
+  margin-top: 5px;
+  @include fluid-text(22, 48);
+  @include tablet-small {
+    margin-top: 15px;
+  }
+}
+
+.info {
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 24px;
+  @include tablet-small {
+    column-gap: 12px;
+    margin-top: 25px;
+  }
+  &-icon {
+    width: 73px;
+    @include tablet-small {
+      width: 55px;
+    }
+  }
+  &-text {
+    max-width: 599px;
+    @include fluid-text(16, 22);
+  }
+}

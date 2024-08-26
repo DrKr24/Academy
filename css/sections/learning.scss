@@ -1,0 +1,146 @@
+.learning {
+  padding-top: 160px;
+  color: var(--font-color-first);
+  font-family: var(--second-family);
+  @include tablet {
+    padding-top: 80px;
+  }
+  @include phone-large {
+    padding-top: 40px;
+  }
+  &__info {
+    height: 130px;
+    align-items: flex-start;
+    &-text {
+      align-self: flex-end;
+    }
+  }
+  &__list {
+    min-height: 600px;
+    margin-top: 48px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-inline: auto;
+    @include laptop {
+      min-height: 660px;
+      width: 810px;
+    }
+    @include tablet {
+      width: 690px;
+    }
+    @include tablet-small {
+      width: 520px;
+      margin-top: 25px;
+    }
+    @include phone-alter {
+      min-height: 550px;
+      width: 400px;
+    }
+    @include phone-medium {
+      width: 340px;
+    }
+    @include phone-small {
+      width: 300px;
+    }
+    &__item {
+      position: relative;
+      padding: 20px 34px;
+      padding-bottom: 22px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      border-radius: 24px;
+      width: 380px;
+      height: 400px;
+      @include laptop {
+        width: 280px;
+        height: 300px;
+      }
+      @include tablet {
+        width: 280px;
+        height: 300px;
+      }
+      @include tablet-small {
+        width: 220px;
+        height: 240px;
+      }
+      @include phone-alter {
+        padding: 15px 20px;
+        width: 220px;
+        height: 240px;
+        justify-content: space-between;
+      }
+      @include phone-medium {
+        width: 180px;
+        height: 200px;
+      }
+      @include phone-small {
+        width: 166px;
+        height: 186px;
+      }
+      &-number {
+        line-height: 106%;
+        @include fluid-text(32, 64);
+      }
+      &-title {
+        text-align: right;
+        @include fluid-text(24, 48);
+        rotate: 90deg;
+        width: 380px;
+        height: max-content;
+        translate: 100px 55px;
+        @include laptop {
+          translate: 10px -5px;
+        }
+        @include tablet-small {
+          translate: -40px -45px;
+        }
+        @include phone-alter {
+          rotate: 0deg;
+          translate: 0 0;
+          width: 100%;
+          text-align: end;
+        }
+      }
+    }
+    @for $i from 1 through 6 {
+      &__item:nth-child(#{$i}) {
+        z-index: -#{$i};
+        background-color: nth($listColors, $i);
+        box-shadow: 6px 6px 0 0 nth($listBoxShadowColors, $i);
+        border: 2px solid nth($listBoxShadowColors, $i);
+        color: nth($listBoxShadowColors, $i);
+        @if $i > 1 {
+          top: calc(32px * ($i - 1));
+          left: calc(149px * ($i - 1));
+          @include laptop {
+            top: calc(52px * ($i - 1));
+            left: calc(105px * ($i - 1));
+          }
+          @include tablet {
+            top: calc(72px * ($i - 1));
+            left: calc(81px * ($i - 1));
+          }
+          @include tablet-small {
+            left: calc(61px * ($i - 1));
+          }
+          @include phone-alter {
+            top: calc(82px * ($i - 1));
+            left: calc(35px * ($i - 1));
+          }
+          @include phone-medium {
+            top: calc(65px * ($i - 1));
+            left: calc(32px * ($i - 1));
+          }
+          @include phone-small {
+            left: calc(26px * ($i - 1));
+          }
+        } @else {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

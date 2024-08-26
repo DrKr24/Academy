@@ -1,0 +1,147 @@
+.process {
+  padding-top: 160px;
+  color: var(--font-color-second);
+  font-family: var(--second-family);
+  @include tablet {
+    padding-top: 80px;
+  }
+  @include phone-large {
+    padding-top: 40px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1030px;
+    width: 100%;
+    transform: skewY(8deg);
+    background-color: #e9f7e2;
+    top: 820px;
+    z-index: -1;
+    @include phone-alter {
+      top: 670px;
+    }
+  }
+  &__inner {
+    position: relative;
+  }
+  &__info {
+    height: 85px;
+    align-items: flex-start;
+    &-text {
+      align-self: flex-end;
+    }
+  }
+  &__list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 30px;
+
+    @include tablet-small {
+      margin-top: 25px;
+    }
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 30px;
+    }
+    @include phone-large {
+      row-gap: 20px;
+    }
+    &__item {
+      flex: 1;
+      position: relative;
+      max-width: 355px;
+      min-height: 443px;
+      padding: 60px 50px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      border: 2px solid var(--font-color-second);
+      @include laptop {
+        padding: 40px 30px;
+        height: 380px;
+      }
+      @include tablet {
+        padding: 20px;
+        max-width: 100%;
+        min-height: 100px;
+        height: max-content;
+        width: 100%;
+      }
+      @include phone-alter {
+        border-width: 1px;
+      }
+      @include phone-large {
+        padding: 10px 15px;
+      }
+      &-icon {
+        width: 50px;
+        aspect-ratio: 1;
+      }
+      &-title {
+        line-height: 1.14;
+        height: 100px;
+        @include fluid-text(22, 28);
+        @include tablet {
+          height: max-content;
+        }
+      }
+      &-description {
+        max-width: 220px;
+        @include tablet {
+          max-width: 90%;
+        }
+        @include phone-large {
+          max-width: 100%;
+        }
+      }
+      &-element {
+        position: absolute;
+        border: 2px solid var(--font-color-second);
+        width: 16px;
+        aspect-ratio: 1;
+        background-color: #fff;
+        @include phone-alter {
+          border-width: 1px;
+          width: 12px;
+        }
+        &:nth-child(1) {
+          top: -8px;
+          left: -8px;
+
+          @include phone-alter {
+            top: -6px;
+            left: -6px;
+          }
+        }
+        &:nth-child(2) {
+          top: -8px;
+          right: -8px;
+          @include phone-alter {
+            top: -6px;
+            right: -6px;
+          }
+        }
+        &:nth-child(3) {
+          bottom: -8px;
+          left: -8px;
+          @include phone-alter {
+            bottom: -6px;
+            left: -6px;
+          }
+        }
+        &:nth-child(4) {
+          bottom: -8px;
+          right: -8px;
+          @include phone-alter {
+            bottom: -6px;
+            right: -6px;
+          }
+        }
+      }
+    }
+  }
+}

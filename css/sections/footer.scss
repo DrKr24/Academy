@@ -1,0 +1,50 @@
+.footer {
+  margin-top: 180px;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-top: 120px;
+    margin-bottom: 30px;
+  }
+  @include phone-large {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  @include phone-small {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+    @include tablet {
+      row-gap: 20px;
+    }
+  }
+  &-title {
+    max-width: 670px;
+    line-height: 1.06;
+    @include fluid-text(32, 64);
+    @include laptop {
+      max-width: 530px;
+    }
+  }
+  &-description {
+    max-width: 584px;
+    font-family: var(--second-family);
+    line-height: 1.52;
+    color: #51526a;
+    @include fluid-text(14, 22);
+    @include laptop {
+      max-width: 454px;
+    }
+  }
+  &__main__content__interactive-field {
+    margin-top: 32px;
+    @include phone-large {
+      margin-top: 16px;
+    }
+  }
+}

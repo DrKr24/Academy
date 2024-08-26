@@ -1,0 +1,24 @@
+:root {
+  --font-color-first: #090b37;
+  --font-color-second: #465b43;
+
+  --font-family: "SourceSansPro";
+  --second-family: "Hind";
+
+  --font-size: 22px;
+
+  --font-weight: 400;
+
+  --line-height-first: 1.12;
+  --line-height-second: 1.45;
+
+  --container-width: 1152px;
+  --container-padding: 10px;
+
+  --transition-duration: 0.5s;
+
+  --border-radius: 200px;
+}
+
+$listColors: #f4a59f, #e284a0, #f2ba89, #cdeec8, #bbbffb, #e8e9f1;
+$listBoxShadowColors: #7c1d19, #6c1a45, #945219, #465b43, #3c2b84, #090b37;

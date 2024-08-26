@@ -1,0 +1,88 @@
+.comment {
+  margin-top: 0px;
+  padding: 200px 0;
+  @include tablet {
+    padding: 100px 0;
+  }
+  @include phone-alter {
+    padding: 250px 0 100px;
+  }
+  @include phone-large {
+    padding: 140px 0 100px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1680px;
+    width: 100%;
+    background-color: var(--font-color-first);
+    top: 2470px;
+    left: 0px;
+    clip-path: polygon(0 24%, 100% 0, 100% 100%, 0 76%);
+    z-index: -10;
+    @include laptop-large {
+      height: 1500px;
+      top: 2450px;
+      clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 84%);
+    }
+    @include laptop {
+      height: 1400px;
+      top: 2420px;
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    }
+    @include tablet {
+      height: 1000px;
+      top: 2440px;
+      clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 94%);
+    }
+    @include tablet-small {
+      height: 1000px;
+      top: 2460px;
+      clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 94%);
+    }
+    @include phone-alter {
+      height: 1000px;
+      clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+    }
+    @include phone-large {
+      top: 2270px;
+      clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+    }
+    @include phone-medium {
+      top: 2220px;
+      clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+    }
+    @include phone-medium {
+      top: 2300px;
+      clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+    }
+  }
+  &__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 34px;
+  }
+  &-title {
+    max-width: 690px;
+    font-family: var(--second-family);
+    line-height: 110%;
+    text-align: center;
+    color: #fff;
+    @include fluid-text(26, 48);
+    @include tablet {
+      max-width: 450px;
+    }
+  }
+  &__info {
+    @include flex-center;
+    column-gap: 4px;
+    &-link {
+      font-family: var(--second-family);
+      line-height: var(--line-height-second);
+      color: #c1c8fb;
+      @include fluid-text(14, 18);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight);
+  color: var(--font-color-first);
+  line-height: var(--line-height-first);
+  transition-duration: var(--transition-duration);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-first);
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+input[type="text"] {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--font-color-first);
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

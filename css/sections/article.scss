@@ -1,0 +1,90 @@
+.article {
+  margin-top: 48px;
+  &__inner {
+    @include flex-center;
+  }
+  &__container {
+    padding: 50px 66px 66px 66px;
+    max-width: 700px;
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    background-image: url(/images/article-bg.png);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--font-color-first);
+    border-radius: 18px;
+    @include tablet {
+      row-gap: 55px;
+    }
+    @include phone-alter {
+      height: auto;
+      padding: 30px 46px 46px 46px;
+    }
+    @include phone-large {
+      row-gap: 35px;
+      padding: 15px 26px 26px 26px;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      &__info {
+        position: relative;
+        &::after {
+          content: "";
+          background-image: url(/images/article-arrow-link.svg);
+          width: 107px;
+          height: 59px;
+          top: 62px;
+          left: 102px;
+          position: absolute;
+          @include phone-large {
+            top: 52px;
+            left: 72px;
+          }
+        }
+        &-image {
+          @include phone-large {
+            width: 100px;
+          }
+        }
+      }
+      &__link {
+        width: 62px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #ffffff45;
+        @include flex-center;
+      }
+    }
+    &__main {
+      font-family: var(--second-family);
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      &-title {
+        line-height: 1.2;
+        color: #3c2b84;
+        @include fluid-text(14, 20);
+      }
+      &-description {
+        font-family: var(--second-family);
+        line-height: var(--line-height-second);
+        color: #333;
+        @include fluid-text(12, 18);
+      }
+    }
+    &-link {
+      max-width: 215px;
+      padding: 14px 20px;
+      background-color: #ffffff5b;
+      border-radius: var(--border-radius);
+      font-family: var(--font-family);
+      line-height: var(--line-height-second);
+      color: var(--font-color-first);
+      @include fluid-text(12, 14);
+    }
+  }
+}

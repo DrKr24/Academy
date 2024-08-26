@@ -1,0 +1,8 @@
+@mixin fluid-text($min, $max) {
+  font-size: clamp(#{$min}px, calc(($max / 1440) * 100vw), #{$max}px);
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
